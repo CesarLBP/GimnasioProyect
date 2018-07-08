@@ -64,7 +64,7 @@ create table afiliado
     PRIMARY KEY (id),
     FOREIGN KEY (id_persona) REFERENCES persona(id)
 );
-insert into afiliado(id,id_persona,tipo_sangre,estatura,peso,fecha_nac) values (1,1,'A+-','0.00','0.00','0000/00/00');
+insert into afiliado(id,id_persona,tipo_sangre,estatura,peso,fecha_nac) values (1,1,'A+-','0.00','0.00','0001-01-01');
 
 
 CREATE TABLE asistencia
@@ -111,4 +111,4 @@ CREATE TABLE estudianteCurso(
     FOREIGN KEY (id_estudiante) REFERENCES estudiante(id),
     FOREIGN KEY (id_curso) REFERENCES curso(id)
 );
-INSERT INTO estudianteCurso(id, id_estudiant, id_curso) values (1,1,1);
+INSERT INTO estudianteCurso(id, id_estudiante, id_curso) values (1,1,1);
