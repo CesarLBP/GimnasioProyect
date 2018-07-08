@@ -12,9 +12,18 @@
 
 			/*configurar metodos:
 			
-			0:Metodos Publicoss (se puede acceder estando o no logeado)
-			1:Metodos a los que se puede acceder solo si se esta logeado
-			2:Metodos a los que se puede acceder solo si NO se esta logeado
+			0:Páginas Publicoss (se puede acceder estando o no logeado)
+			1:Páginas a los que se puede acceder solo si se esta logeado
+			2:Páginas a los que se puede acceder solo si NO se esta logeado
+
+			*/
+
+			/*
+			Permisos:
+				0: root
+				1: Jefe
+				2: Suervisor
+				3: profesor
 
 			*/
 
@@ -27,7 +36,18 @@
 				'usuarios'=>[1,[0]],
 				'registrarUsuario'=>[1,[0]],
 				'cerrarSesion'=>[1,[0,1,2]]
-			]	
+			],
+			'estudiantes'=>[
+				'estudiantes'=>[1,[0,1]]
+			],
+			'afiliados'=>[
+				'afiliados'=>[1,[0,1,2]]
+			],
+			'cursos'=>[
+				'cursos'=>[1,[0,1]],
+				'consultap1'=>[1,[0,1,3]]
+			]
+
 
 		];
 		public static function cargar(){

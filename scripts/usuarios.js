@@ -10,7 +10,7 @@ function error(){
 
 $(function(){
 
-	$('#botonRegistrar').click(function(){
+	$('#enviar').click(function(){
 
 		var usuario = $('#usuario').val();
 

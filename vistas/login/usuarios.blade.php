@@ -7,18 +7,10 @@
 </head>
 
 <body>
+	<?php Crear::comun('navbar');?>
 
 	<div class="container-fluid">
 			
-		<form method="get">
-			<?php
-
-				Crear::comun('navbar');
-
-			?>
-
-
-		</form>
 		<div class="row">
 			
 			<div  id="registrarUsuario" class="col-md-5">
@@ -59,11 +51,12 @@
 								<option value="0001">Profesor</option>
 								<option value="0010">Supervisor</option>
 								<option value="0100">Jefe</option>
-								<?php if(Funciones::PGSC('permisos')[0]=='1'):?>
+								
+								@if(Funciones::PGSC('permisos')[0]=='1')
 
 								<option value="1111">Root</option>
 								
-								<?php endif ?>
+								@endif
 
 								
 							</select>

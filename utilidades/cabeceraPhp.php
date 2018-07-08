@@ -1,6 +1,6 @@
 <?php
-	define('user','Cesar');
-	define('pass','Dominic123..');
+	define('user','root');
+	define('pass','erestu');
 	define('gestor','mysql');
 	define('host','localhost');
 	define('bd','gimnasio');

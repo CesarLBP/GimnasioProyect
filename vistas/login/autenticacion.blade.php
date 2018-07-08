@@ -25,16 +25,9 @@
 								<input class="form-control" type="password" maxlength="255" name="contrasena" placeholder="Contraseña">
 
 								<input hidden name="prov" value="index">
-							
 
-								<?php
-								
-
-									Crear::botonEnviar('Ingresar','login','iniciarSesion','enviar','btn btn-primary col-md-8 form-control');
-
-								?>
-
-
+									{{Crear::botonEnviar('Ingresar','login','iniciarSesion','enviar','btn btn-primary col-md-8 form-control')}}
+									
 							</div>
 						</form>
 
