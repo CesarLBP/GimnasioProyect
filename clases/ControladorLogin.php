@@ -65,11 +65,14 @@
 		}
 		public static function registrarUsuario(){
 
+
+			$Persona = new Persona($_POST['nombres'],$_POST['apellidos'],$_POST['cedula'],$_POST['sexo']);
 			
 			$Usuario = new Usuario($_POST['usuario'],$_POST['contrasena'],$_POST['permisos'],1);
+
 			unset($_POST);
 			
-			if ($Usuario->crearUsuario()){
+			if (($Usuario->crearUsuario())&&($Persona->crearPersona())){
 				echo '<script>alert("Usuario creado")</script>';
 			}else{
 				echo '<script>alert("Usuario no creado")</script>';
@@ -77,39 +80,13 @@
 			self::usuarios();
 
 		}
+		
 		public function extraerUsuarios(){
 
 			$con = new Conexion();
 			return $con->extraer('select * from usuario');			
 
 		}
-		public static function prueba(){
-
-			if(Ajax::verificarCode()){
-
-				$usuario[] = Funciones::PGSC('varUsuario');
-				$usuario[] = Funciones::PGSC('varContrasena');
-				$usuario[] = Funciones::PGSC('varPermisos');
-				$usuario = new Usuario($usuario[0],$usuario[1],$usuario[2],1);
-				$res= $usuario->crearUsuario();
-
-				if($res){
-
-					echo json_encode(1);
-				}else{
-					echo json_encode(0);
-
-				}
-			}else{
-				echo json_encode('Fuente no confiable');
-			}
-
-		}
-		public static function pruebaDos(){
-
-			echo 'Dos';
-		}
-
 
 
 
