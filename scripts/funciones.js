@@ -55,5 +55,9 @@ function ETFGetJson(datos,hecho,error){
 	.fail(error)
 
 }
-
-
+function soloNumeros(){
+	
+	$('.soloNumeros').keyup(function (){
+    	this.value = (this.value + '').replace(/[^0-9]/g, '');
+	});
+}

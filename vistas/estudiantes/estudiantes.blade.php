@@ -3,15 +3,14 @@
 </head>
 
 <body>
-	<?php
 
-		Crear::comun('navbar');
+	{{Crear::comun('navbar')}}
 
-
-		
-	?>
 	<div class="container-fluid">
+<<<<<<< HEAD
 			
+=======
+>>>>>>> bd2db71ecd0f50df344687671826b43e2e1d1f2e
 
 		<div class="row">
 			
@@ -35,7 +34,7 @@
 
 							<input id="apellidos" class="form-control" type="text" name="apellidos" placeholder="Apellidos">
 
-							<input id="cedula" class="form-control" type="text" name="cedula" placeholder="Cédula">
+							<input id="cedula" class="soloNumeros form-control limitarLargo" type="text" name="cedula" placeholder="Cédula" pattern="{1,10}">
 
 							<select id="sexo" class="form-control">
 								<option disabled selected>Sexo</option>
@@ -66,7 +65,10 @@
 						</div>
 					<div class="card-footer">
 
-						<input type="submit" id="botonRegistrar"  class="btn btn-primary col-md-6 offset-md-3" value="Inscribir">
+
+						{{Crear::code()}}
+
+						{{Crear::botonEnviarAjax('Enviar','estudiantes','prueba','registrar','btn btn-dark offset-4 col-4')}}
 						
 						
 					</div>
@@ -199,9 +201,7 @@
 	    </div>
 	  </div>
 	</div>
- 	
-	
-
+	<script src="scripts/estudiantes.js"></script>
 </body>
 </html>
 
