@@ -34,11 +34,10 @@
 							<input id="cedula" class="form-control" type="text" name="cedula" placeholder="Cédula">
 
 							<select id="sexo" class="form-control">
-								<option disabled selected>Sexo</option>
+								<option value="0">Sexo</option>
 								<option value="M">M</option>
 								<option value="F">F</option>
 							</select>
-
 
 							<input id="usuario" class="form-control" type="text" name="usuario" placeholder="Usuario">
 

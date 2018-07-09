@@ -12,9 +12,7 @@
 	?>
 	<div class="container-fluid">
 			
-		<form method="get">
 
-		</form>
 		<div class="row">
 			
 			<div  id="registrarUsuario" class="col-md-5">
@@ -39,19 +37,28 @@
 
 							<input id="cedula" class="form-control" type="text" name="cedula" placeholder="Cédula">
 
-							<select class="form-control">
+							<select id="sexo" class="form-control">
 								<option disabled selected>Sexo</option>
 								<option>M</option>
 								<option>F</option>
 							</select>
 
-							<select class="form-control">
+							<select id="departamento" class="form-control">
 								<option disabled selected>Departamento</option>
 								<option>Informatica</option>
 								<option>Electronica</option>
 								<option>Electricidad</option>
 								<option>Contaduria</option>
 								<option>Instrumentacion y Control</option>
+							</select>
+
+							<select id="trayecto" class="form-control">
+								<option disabled selected>Trayecto</option>
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
 							</select>
 
 						

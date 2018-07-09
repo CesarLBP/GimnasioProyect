@@ -37,5 +37,14 @@
 				array('nombres'=>$this->getNombre(),'apellidos'=>$this->getApellidos(),'cedula'=>$this->getCedula(),'sexo'=>$this->getSexo()));
 
 		}
+
+		public function extraerPersona(){
+			$con = new Conexion();
+
+			return $con->extraer('select * from persona');
+
+
+		}
+
 	}
 ?>

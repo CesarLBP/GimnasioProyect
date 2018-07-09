@@ -30,5 +30,12 @@
 
 		}
 
+		public function extraerUsuarios(){
+
+			$con = new Conexion();
+			return $con->extraer('select * from usuario');			
+
+		}
+
 	}
 ?>

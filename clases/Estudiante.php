@@ -21,17 +21,18 @@ require_once 'Persona.php';
 		$this->setTrayecto($tra);
 		}
 
-		public function extraerPersona(){
+		public function enviarEstudiantes(){
+			$con = new Conexion();
+
+			//return $con->enviar("insert into estudiante (id_persona,id_departamento,trayecto) values ( (select id from persona where cedula = getCedula()) ,(select id from persona where nombre = getDepartamento()) ,getTrayecto   )",array('');
+		}
+
+		public function extraerEstudiantes(){
 			$con = new Conexion();
 
 			return $con->extraer('select * from persona where persona');
 		}
 
-		public function enviarPersona(){
-			$con = new Conexion();
-
-			return $con->enviarPersona("insert into persona (nombres,apellidos,cedula,sexo) values (:nombre,:apellido,:cedula,:sexo)",array('nombre'=>$this->getNombre(),'apellido'=>$this->getApellido(),''=>$this->getCedula(),'sexo'=>$this->getSexo()));
-		}
 		
 
 	}
