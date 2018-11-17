@@ -1,2 +1,0 @@
-Se modificó en la BD el archivo sql. No puede haber año,mes ni día 0.
-Faltaba una 'e' en una clave foranea
