@@ -1,0 +1,17 @@
+body{
+	background: grey;
+}
+input{
+	margin-top:1%;
+	margin-bottom:1%;
+}
+#imagenFondo{
+	width:100%;
+}
+.container-fluid{
+	background: none;
+	position:absolute;
+}
+#titulo{
+	margin-top:2%;
+}
