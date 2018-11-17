@@ -106,7 +106,7 @@
 		public function extraerUsuarios(){
 
 			$con = new Conexion();
-			return $con->extraer('select usuario.id, usuario.id_persona, usuario.usuario, usuario.permisos, usuario.estado, persona.id, persona.nombres, persona.apellidos, persona.cedula, persona.sexo from usuario, persona where usuario.id_persona = persona.id');			
+			return $con->extraer('select usuario.id, usuario.id_persona, usuario.usuario, usuario.permisos, usuario.estado, persona.id, persona.nombres, persona.apellidos, persona.cedula, persona.sexo from usuario, persona where usuario.id_persona = persona.id and usuario.id != 1 order by(usuario.permisos) desc');			
 
 		}
 

@@ -1,5 +1,5 @@
 <?php !isset($system)? header('Location:../../'):0;?>
-<title>Iniciar Sesion</title>
+<title>Usuarios</title>
 <link rel="stylesheet" type="text/css" href="estilos/usuarios.css">
 <script src="scripts/usuarios.js"></script>
 </head>
@@ -103,6 +103,9 @@
 										{{'Supervisor'}}
 									@elseif($valor['permisos']=='0001')
 										{{'Profesor'}}
+									@elseif($valor['permisos']=='1111')
+										{{'Root'}}
+
 									@endif
 								</td>
 								
@@ -158,7 +161,7 @@
 		        <input name="cedula_mod" id="cedula-mod" class="col-md-8 offset-md-2 form-control" placeholder="Repetir Contraseña" type="text">
 		        <input name="usuario_mod" id="usuario-mod" class="col-md-8 offset-md-2 form-control" placeholder="Usuario" type="text">
 		        <input name="contrasena_mod" id="contrasena-mod" class="col-md-8 offset-md-2 form-control" placeholder="Contraseña" type="text">
-		        <input id="repContrasena" class="col-md-8 offset-md-2 form-control" placeholder="Repetir Contraseña" name="">
+		        <input id="rep-contrasena-mod" class="col-md-8 offset-md-2 form-control" placeholder="Repetir Contraseña">
 		        <div class="row">
 		        	
 			        <div class="col-md-4 offset-md-2">
