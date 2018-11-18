@@ -20,7 +20,7 @@
 		<?php endif ?>
 
 		<?php if((Funciones::PGSC('permisos')[0]=='1') or (Funciones::PGSC('permisos')[1]=='1') or (Funciones::PGSC('permisos')[2]=='1') or (Funciones::PGSC('permisos')[3]=='1')):?>
-		<a align="center" class="dropdown-item" href="./?mod=cursos/crear_curso">Cursos</a>
+		<a align="center" class="dropdown-item" href="./?mod=cursos/cursos">Cursos</a>
 		<?php endif ?>
 
 		<?php if(Funciones::PGSC('permisos')[3]=='1'):?>

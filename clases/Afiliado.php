@@ -44,5 +44,11 @@ require_once 'Persona.php';
 			return $con->extraer('select * from persona where persona');
 		}
 
+		public function enlazarAsistencia(){
+			$con = new Conexion();
+
+			return $con->enviar("insert into asistencia (id_afiliado,asistencia) values ((select max(id) from afiliado),0)");
+		}
+
 	}
 ?>

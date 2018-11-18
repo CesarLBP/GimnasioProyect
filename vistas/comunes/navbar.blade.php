@@ -37,6 +37,32 @@
 						</div>
 					</li>
 				<?php endif; ?>
+
+				<?php if(explode('/',Funciones::PGSC('mod'))[0]==='afiliados'): ?>
+
+					<li style="margin-left:3%;">
+						<div class="dropdown">
+
+						  	<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownNavBar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo 'Consultas';?>
+						  	</button>
+
+							<div class="dropdown-menu" aria-labelledby="dropdownNavBar">
+								
+								<a align="center" class="dropdown-item" href="./?mod=afiliados/consulta_diaria">Diaria</a>
+
+								<a align="center" class="dropdown-item" href="./?mod=afiliados/consulta_semanal">Semanal</a>
+								
+								<a align="center" class="dropdown-item" href="./?mod=afiliados/consulta_mensual">Mensual</a>
+								
+								<a align="center" class="dropdown-item" href="./?mod=afiliados/consulta_especifica">Especifico</a>
+
+								<a align="center" class="dropdown-item" href="./?mod=afiliados/afiliados">Registrar</a>
+
+							</div>
+
+						</div>
+					</li>
+				<?php endif; ?>
 			</ul>
 
 

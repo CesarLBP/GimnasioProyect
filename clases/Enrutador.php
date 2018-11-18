@@ -12,9 +12,9 @@
 
 			/*configurar metodos:
 			
-			0:metodos Publicos (se puede acceder estando o no logeado)
-			1:metodos a los que se puede acceder solo si se esta logeado
-			2:metodos a los que se puede acceder solo si NO se esta logeado
+			0:Páginas Publicoss (se puede acceder estando o no logeado)
+			1:Páginas a los que se puede acceder solo si se esta logeado
+			2:Páginas a los que se puede acceder solo si NO se esta logeado
 
 			*/
 
@@ -34,16 +34,18 @@
 				'autenticacion'=>[2],
 				'iniciarSesion'=>[0],
 				'usuarios'=>[1,[0]],
-				'registrar_usuario'=>[1,[0]],
-				'eliminar_usuario'=>[1,[0]],
-				'modificar_usuario'=>[1,[0]],
+				'registrarUsuario'=>[1,[0]],
 				'cerrarSesion'=>[1,[0,1,2,3]]
 			],
 			'estudiantes'=>[
 				'estudiantes'=>[1,[0,1]]
 			],
 			'afiliados'=>[
-				'afiliados'=>[1,[0,1,2]]
+				'afiliados'=>[1,[0,1,2]],
+				'consulta_diaria'=>[1,[0,1,2]],
+				'consulta_semanal'=>[1,[0,1,2]],
+				'consulta_mensual'=>[1,[0,1,2]],
+				'consulta_especifica'=>[1,[0,1,2]]
 			],
 			'cursos'=>[
 				'cursos'=>[1,[0,1]],
@@ -52,7 +54,6 @@
 				'asignar_estudiantes'=>[1,[0,1]],
 				'consultar_cursos'=>[1,[0,1]],
 				'crear_curso'=>[1,[0,1]],
-				'modificar_usuario'=>[1,[0,1]],
 
 				'consultap1'=>[1,[0,1,3]]
 			]
