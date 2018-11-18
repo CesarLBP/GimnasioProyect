@@ -91,17 +91,15 @@ INSERT INTO `profesor`(`id`, `id_persona`, `id_usuario`) VALUES (1,1,1);
 create table curso
 (
     id int not null AUTO_INCREMENT,
-    id_persona int not null,
     id_departamento int not null,
     id_profesor int not null,
     nota int(2),
     
     PRIMARY KEY (id),
-    FOREIGN KEY (id_persona) REFERENCES persona(id),
     FOREIGN KEY (id_profesor) REFERENCES profesor(id),
     FOREIGN KEY (id_departamento) REFERENCES departamento(id)
 );
-INSERT INTO `curso`(`id`, `id_persona`, `id_departamento`, `id_profesor`, `nota`) VALUES (1,1,1,1,0);
+INSERT INTO `curso`(`id`, `id_departamento`, `id_profesor`, `nota`) VALUES (1,1,1,0);
 
 CREATE TABLE estudianteCurso(
     id int not null AUTO_INCREMENT,

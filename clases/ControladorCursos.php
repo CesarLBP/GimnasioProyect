@@ -11,39 +11,42 @@
 
 		public static function crear_curso(){
 			$con = new Conexion();
-			$prof = $con->extraer('SELECT profesor.id, nombres, apellidos FROM persona, profesor WHERE profesor.id_persona = persona.id');
-
-
 			$deps = $con->extraer('SELECT * FROM departamento');
-
-
-			$sql = 'SELECT p.id, p.nombres, p.apellidos, p.cedula, p.sexo, e.trayecto, d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento';
-			$arr = NULL;
+			$prof = $con->extraer('SELECT profesor.id, nombres, apellidos FROM persona, profesor WHERE profesor.id_persona = persona.id');
 			
-			$dep_select = '';
-
 			if((isset($_GET['departamento'])) && ($_GET['departamento']!='-1')){
 				
-				$dep_select = $_GET['departamento'];
-				$sql.= ' AND d.id = :dep_select';
-				$arr['dep_select'] = $dep_select;
 
-			}
 
-			$tra_select = '';
-			if((isset($_GET['trayecto'])) && ($_GET['trayecto']!='-1')){
-					
-				$tra_select = $_GET['trayecto'];
-				$sql.= ' AND e.trayecto = :tra_select';
-				$arr['tra_select'] = $tra_select;
+
+
+				$sql = 'SELECT p.id, p.nombres, p.apellidos, p.cedula, p.sexo, e.trayecto, d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento';
+				$arr = NULL;
 				
 
+					
+					$dep_select = $_GET['departamento'];
+					$sql.= ' AND d.id = :dep_select';
+					$arr['dep_select'] = $dep_select;
+
+
+				$tra_select = '';
+				if((isset($_GET['trayecto'])) && ($_GET['trayecto']!='-1')){
+						
+					$tra_select = $_GET['trayecto'];
+					$sql.= ' AND e.trayecto = :tra_select';
+					$arr['tra_select'] = $tra_select;				
+				}
+
+				$sql .= ' order by d.nombre, e.trayecto;';
+				$ests = $con->extraer($sql,$arr);
+
+				Accion::cargarPagina('cursos','crear_curso',['prof'=>$prof,'deps'=>$deps,'ests'=>$ests,'dep_select'=>$dep_select]);
+			}else{
+				
+				$dep_select = '';
+				Accion::cargarPagina('cursos','crear_curso',['prof'=>$prof,'deps'=>$deps,'ests'=>[],'dep_select'=>$dep_select]);
 			}
-
-			$sql .= ' order by(d.nombre)';
-			$ests = $con->extraer($sql,$arr);
-
-			Accion::cargarPagina('cursos','crear_curso',['prof'=>$prof,'deps'=>$deps,'ests'=>$ests,'dep_select'=>$dep_select]);
 		}
 
 		public static function cursos_asignados(){
@@ -61,7 +64,6 @@
 			Accion::cargarPagina('cursos','asignar_estudiantes',['cursos'=>$datos2]);
 		}
 
-//$datos3 = $con->extraer('SELECT profesor.id as profesor,departamento.nombre as departamento,estudiante.trayecto FROM persona,departamento,profesor,estudiante WHERE  estudiante.id_persona=persona.id and estudiante.id_departamento=departamento.id and profesor.id_persona=persona.id');
 		public static function cursos(){
 
 			$con = new Conexion();
