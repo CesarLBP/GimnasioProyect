@@ -34,7 +34,9 @@
 				'autenticacion'=>[2],
 				'iniciarSesion'=>[0],
 				'usuarios'=>[1,[0]],
-				'registrarUsuario'=>[1,[0]],
+				'registrar_usuario'=>[1,[0]],
+				'eliminar_usuario'=>[1,[0]],
+				'modificar_usuario'=>[1,[0]],
 				'cerrarSesion'=>[1,[0,1,2,3]]
 			],
 			'estudiantes'=>[
@@ -54,7 +56,7 @@
 				'asignar_estudiantes'=>[1,[0,1]],
 				'consultar_cursos'=>[1,[0,1]],
 				'crear_curso'=>[1,[0,1]],
-
+				'modificar_usuario'=>[1,[0,1]],
 				'consultap1'=>[1,[0,1,3]]
 			]
 

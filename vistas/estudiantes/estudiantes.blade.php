@@ -9,24 +9,12 @@
 
 	{{Crear::comun('navbar')}}
 
-	<div class="container-fluid">
-
-		<div class="row justify-content-center">
-			<h5 style="color: white;"> REGISTRO DE ESTUDIANTE </h5>
-		</div>	
-
-		<div class="row">
-
-			<div  id="registrarUsuario" class="col-md-5">
-				
+	<div class="container-fluid">	
+		<div class="row" style="margin-top: 2%;">
+			<div  id="registrarUsuario" class="col-md-4">
 				<div class="col-md-10 offset-md-2 card" style="padding:0;">
-					<div class="card-header">
-						<h5 id="titulo" align="center"><strong>Inscribir Estudiante</strong></h5>	
-						<center>
-							<span style="color:red">Todos los datos son requeridos
-							</span>
-
-						</center>
+					<div class="card-header" style="background: #212529; border:none; color:white">
+						<h5 id="titulo" align="center"><strong>INSCRIBIR ESTUDIANTE</strong></h5>	
 					</div>
 					
 						<div class="card-body">
