@@ -9,7 +9,11 @@
 			Accion::cargarPagina('cursos','estudiantes_sin_curso',['cursos'=>$datos1]);
 		}
 		public static function crear_curso_nuevo(){
-			
+			//Validar lo que llega mediante post
+
+			$sql = 'INSERT INTO curso (id_departamento,id_)'
+
+
 		}
 
 		public static function crear_curso(){
