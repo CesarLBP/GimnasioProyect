@@ -56,6 +56,7 @@
 				'asignar_estudiantes'=>[1,[0,1]],
 				'consultar_cursos'=>[1,[0,1]],
 				'crear_curso'=>[1,[0,1]],
+				'crear_curso_nuevo'=>[1,[0,1]],
 				'modificar_usuario'=>[1,[0,1]],
 				'consultap1'=>[1,[0,1,3]]
 			]

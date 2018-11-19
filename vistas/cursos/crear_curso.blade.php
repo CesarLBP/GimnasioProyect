@@ -16,7 +16,7 @@
 				<select class="form-control" name="profesor">
 
 					@forelse($prof as $clave => $valor)
-						<option values="{{$valor[id]}}">{{$valor['nombres']}} {{$valor['apellidos']}} </option>
+						<option value="{{$valor['id']}}">{{$valor['nombres']}} {{$valor['apellidos']}} </option>
 					@empty
 						<option disabled">No se encontraron resultados</option>
 
@@ -79,7 +79,7 @@
 									<td>{{$valor['sexo']}}</td>
 									<td>{{$valor['departamento']}}</td>
 									<td>{{$valor['trayecto']}}</td>
-									<td><input class="est" type="checkbox" name="est[]"></td>
+									<td><input class="est" type="checkbox" name="est[]" value="{{$valor['id']}}"></td>
 								</tr>
 							@endforeach
 					</tbody>
@@ -89,7 +89,7 @@
 					<div class="row">
 						<div class="col-md-10">
 							<center>
-								<button class="col-md-4 offset-md-2 btn btn-primary">Crear Curso</button>
+								{{Crear::botonEnviar('Crear Curso','cursos','crear_curso_nuevo','crear-curso','col-md-4 offset-md-2 btn btn-primary')}}
 							</center>
 						</div>
 </form>
