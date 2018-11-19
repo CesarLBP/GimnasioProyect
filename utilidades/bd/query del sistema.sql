@@ -73,6 +73,9 @@ CREATE TABLE asistencia
     id int not null AUTO_INCREMENT,
     id_afiliado int not null,
     asistencia int,
+    fecha date,
+    hora_entrada time,
+    hora_salida time,
     
     PRIMARY KEY (id),
     FOREIGN KEY (id_afiliado) REFERENCES afiliado(id)
