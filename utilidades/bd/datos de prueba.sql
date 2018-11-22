@@ -1,3 +1,4 @@
+use gimnasio;
 insert into persona(nombres,apellidos,cedula,sexo) VALUES
 ('Cesar Leonardo','Bracho Picado','26279030','M'),
 ('Rommel Omar','Montoya Rodriguez','25594817','M'),

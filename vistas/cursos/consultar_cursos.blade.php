@@ -3,110 +3,107 @@
 </head>
 
 <body>
-	<?php
-		Crear::comun('navbar');
-	?>
-	<div class="container-fluid">
-		<div class="row">
-			<div id="consultarUsuario" class="col-md-12">
-				<div style="margin: 1%;">
-
-		<center>
-			<div>
-			<select class="col-2 ">
-				<option disabled selected>Profesor</option>
-				<option>Informatica</option>
-				<option>Electronica</option>
-				<option>Electricidad</option>
-				<option>Contaduria</option>
-				<option>Instrumentacion y Control</option>
-			</select>
-
-			<select class="col-2">
-				<option disabled selected>Departamento</option>
-				<option>Informatica</option>
-				<option>Electronica</option>
-				<option>Electricidad</option>
-				<option>Contaduria</option>
-				<option>Instrumentacion y Control</option>
-			</select>
-
-			<select class="col-2">
-				<option disabled selected>Trayecto</option>
-				<option>Informatica</option>
-				<option>Electronica</option>
-				<option>Electricidad</option>
-				<option>Contaduria</option>
-				<option>Instrumentacion y Control</option>
-			</select>
-
-	</div>
-</center>
-
-			 
-</div>
-
-			<div class="container-fluid">
-		<div class="row">
-			<div id="consultarUsuario" class="col-md-12">
-
-				<table style="text-align:center" class="table table-hover table-dark col-md-12">
-					<thead>
-						
-						<tr>
-							<th>Profesor</th>
-							<th>Departamento</th>
-							<th>Trayecto</th>
-							<th>Seccion</th>
-						</tr>
-
-					</thead>
-
-					<?php 
-
-					foreach($cursos as $clave => $valor){
-
-						echo '<tr>';
-
-						echo '<th>';
-						echo $valor['profesor'];
-						echo '</th>';
-
-						echo '<th>';
-						echo $valor['departamento'];
-						echo '</th>';
-
-						echo '<th>';
-						echo $valor['trayecto'];
-						echo '</th>';
-
-						echo '<th>';
-						echo '1';
-						echo '</th>';
-
-						echo '</tr>';
-					}
-
-
-					?>
-
-
-				</table>		
+	{{Crear::comun('navbar')}}
+	<div class="container">
+		
+		<div class="row" style="margin-top:3%;">
+			<div class="col-md-3">
+				<select class="form-control" required>
+					<option disabled selected>Departamento</option>
+					<option value="1">Informatica</option>
+					<option value="2">Electronica</option>
+					<option value="3">Química</option>
+					<option value="4">Procesos Quémicos</option>
+				</select>
+			</div>
+			<div class="col-md-3">
+				<select class="form-control" required>
+					<option disabled selected>Trayecto</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+			</div>
+			<div class="col-md-3">
+				<select class="form-control" required>
+					<option disabled selected>Profesor</option>
+					<option value="1">Pedro Martinez</option>
+					<option value="2">Julio Cáceres</option>
+					<option value="3">German Rodriguez</option>
+					<option value="4">Omar Montoya</option>
+				</select>
+			</div>
+			<div class="col-md-3">
+				<select class="form-control" required>
+					<option disabled selected>Estado</option>
+					<option value="1">Abierto</option>
+					<option value="2">Cerrado</option>
+				</select>
 			</div>
 
 
-
 		</div>
-
-		
-	</div>
-
-
-
+		<hr>
+		<div class="row justify-content-center">
+			<div class="col-md-3" style="margin:1%;">
+				<center>
+					<div class="card">
+						<div class="card-body">
+							Informatica<br>Trayecto 1
+							<hr>
+							<span style="color:green;">Abierto</span>
+						</div>
+					</div>
+				</center>
 			</div>
-		</div>
+			<div class="col-md-3" style="margin:1%;">
+				<center>
+					<div class="card">
+						<div class="card-body">
+							Electronica<br>Trayecto 2
+							<hr>
+							<span style="color:red;">Cerrado</span>
+						</div>
+					</div>
+				</center>
+			</div>
+			<div class="col-md-3" style="margin:1%;">
+				<center>
+					<div class="card">
+						<div class="card-body">
+							Contaduria Pública<br>Trayecto 1
+							<hr>
+							<span style="color:green;">Abierto</span>
+						</div>
+					</div>
+				</center>
+			</div>
+			<div class="col-md-3" style="margin:1%;">
+				<center>
+					<div class="card">
+						<div class="card-body">
+							Quimica<br>Trayecto 4
+							<hr>
+							<span style="color:red;">Cerrado</span>
+						</div>
+					</div>
+				</center>
+			</div>
+			<div class="col-md-3" style="margin:1%;">
+				<center>
+					<div class="card">
+						<div class="card-body">
+							Mecatronica<br>Trayecto 1
+							<hr>
+							<span style="color:green;">Abierto</span>
+						</div>
+					</div>
+				</center>
+			</div>
 
-		
+
+		</div>
 	</div>
 		
 

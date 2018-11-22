@@ -11,7 +11,7 @@ function error(){
 $(function(){
 
 
-	$('#eenviar').click(function(){
+	$('#enviar').click(function(){
 
 
 		if ($('#nombres').val()=='') {

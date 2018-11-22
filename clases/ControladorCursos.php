@@ -8,6 +8,14 @@
 
 			Accion::cargarPagina('cursos','estudiantes_sin_curso',['cursos'=>$datos1]);
 		}
+		public static function mis_cursos(){
+
+			Accion::cargarPagina('cursos','mis_cursos');
+		}
+		public static function consultar_cursos(){
+
+			Accion::cargarPagina('cursos','consultar_cursos');
+		}
 
 		public static function crear_curso(){
 			$con = new Conexion();
@@ -183,7 +191,7 @@
 			Accion::cargarPagina('cursos','consultap2',['cursos'=>$datos5]);
 			
 		}
-		
+/*		
 		public static function consultar_cursos(){
 
 			$con = new Conexion();
@@ -192,6 +200,8 @@
 			Accion::cargarPagina('cursos','consultar_cursos',['cursos'=>$datos3]);
 			
 		}
-
+*/
 	}
+
+
 ?>

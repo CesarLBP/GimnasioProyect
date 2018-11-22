@@ -3,8 +3,8 @@
 <link rel="stylesheet" type="text/css" href="estilos/login.css">
 </head>
 
-<body>
-	
+
+<body style="background-image: url('utilidades/imagenes/login.jpg'); background-size: 100%;">	
 	<div class="container-fluid">
 
 		<div class="row">
@@ -36,6 +36,5 @@
 			</div>
 		</div>
 	</div>
-	<img id="imagenFondo" src="utilidades/imagenes/Laptop.jpg">
 </body>
 </html>
