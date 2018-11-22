@@ -19,16 +19,15 @@
 		<a align="center" class="dropdown-item" href="./?mod=afiliados/afiliados">Afiliados</a>
 		@endif
 
-		@if((Funciones::PGSC('permisos')[0]=='1') or (Funciones::PGSC('permisos')[1]=='1') or (Funciones::PGSC('permisos')[2]=='1') or (Funciones::PGSC('permisos')[3]=='1'))
+		@if((Funciones::PGSC('permisos')[0]=='1') or (Funciones::PGSC('permisos')[1]=='1') or (Funciones::PGSC('permisos')[2]=='1'))
 		<a align="center" class="dropdown-item" href="./?mod=cursos/crear_curso">Cursos</a>
 		@endif
 
 		@if(Funciones::PGSC('permisos')[3]=='1')
-		<a align="center" class="dropdown-item" href="./?mod=cursos/consultap1">Mis Cursos</a>
+		<a align="center" class="dropdown-item" href="./?mod=cursos/mis_cursos">Mis Cursos</a>
 		@endif
 	
 		<a align="center" class="dropdown-item" href="./?mod=login/cerrarSesion">Cerrar Sesión</a>
-
 	</div>
 
 </div>

@@ -7,7 +7,9 @@
 	{{Crear::comun('navbar')}}
 	<div class="container">
 		<div class="row justify-content-center">
-			CREAR CURSOS
+			<div class="col-md-6">
+				{{Crear::alerta('c',[1=>['Curso creado correctamente'=>'success']])}}
+			</div>
 		</div>
 		<div class="row justify-content-center">
 			<div class="col-md-4">

@@ -29,9 +29,9 @@ function Footer()
 	$this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
 }
 }
-/*
+
 // Creación del objeto de la clase heredada
-$pdf = new PDF();
+/*$pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Times','',12);

@@ -24,7 +24,7 @@
 					Crear::alerta('reg',[
 					0=>['El usuario no fue creado. Intente crear al usuario nuevamente'=>'warning'],
 					1=>['Usuario creado correctamente'=>'success'],
-					2=>['Ha ocurrido un inconveniente interno. Intente crear al usuario nuevamente'=>'success'] ]);
+					2=>['Ha ocurrido un inconveniente interno. Intente crear al usuario nuevamente'=>'warning'] ]);
 				?>
 			</div>
 
