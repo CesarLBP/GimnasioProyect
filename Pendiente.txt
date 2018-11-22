@@ -1,0 +1,6 @@
+Pendiente
+1: Validar si un usuario ya existe
+2: Separar las vistas de Cursos
+3: Generar los PDF
+----------------------
+4: Hay que validar la entrada de datos en los controladores de usuario y curso

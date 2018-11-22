@@ -8,6 +8,7 @@
 
 			Accion::cargarPagina('cursos','estudiantes_sin_curso',['cursos'=>$datos1]);
 		}
+<<<<<<< HEAD
 		public static function mis_cursos(){
 
 			Accion::cargarPagina('cursos','mis_cursos');
@@ -15,6 +16,10 @@
 		public static function consultar_cursos(){
 
 			Accion::cargarPagina('cursos','consultar_cursos');
+=======
+		public static function crear_curso_nuevo(){
+			
+>>>>>>> 03ae1752043f0078509ecff90a1cc5107baf28c6
 		}
 
 		public static function crear_curso(){
@@ -28,7 +33,7 @@
 
 
 
-				$sql = 'SELECT p.id, p.nombres, p.apellidos, p.cedula, p.sexo, e.trayecto, d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento';
+				$sql = 'SELECT e.id, p.nombres, p.apellidos, p.cedula, p.sexo, e.trayecto, d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento';
 				$arr = NULL;
 				
 
