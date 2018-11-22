@@ -11,7 +11,39 @@
 		public static function crear_curso_nuevo(){
 			//Validar lo que llega mediante post
 
-			$sql = 'INSERT INTO curso (id_departamento,id_)'
+			if((isset($_POST['profesor']) && ($_POST['profesor']>0)) && (isset($_POST['departamento']) && ($_POST['departamento']>0)) && (isset($_POST['est']) && (count($_POST['est'])>0))){
+					$num_est = count($_POST['est'])-1;
+				$con new Conexion;
+				$con->enviar('INSERT INTO curso (id_departamento,id_profesor) values (:id_departamento, :id_profesor)',['id_departamento'=>$_POST['departamento'],'id_profesor'=>$_POST['profesor']);
+
+				$id_curso = $con->extraer('SELECT max(id) FROM curso');
+
+				$sql = 'INSERT INTO estudiantecurso (id_curso,id_estudiante) values ';
+				foreach ($_POST['est'] as $clave => $valor){
+					$sql .= '('.$id_curso.',:id_estudiante_'.$clave.')';
+					$arr['id_estudiante_'.$clave] = $_POST['est'][$clave];
+					if($clave != $num_est){
+						$sql .= ',';
+					}else{
+						$sql .= ';';
+					}
+					
+				}
+				if($con->enviar($sql,$arr)){
+					redireccio
+				}
+
+					
+				
+
+				}else{
+
+					
+					echo "datos invalidos";
+
+				}
+
+
 
 
 		}
