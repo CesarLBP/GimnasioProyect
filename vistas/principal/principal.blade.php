@@ -1,7 +1,8 @@
 <title>Principal</title>
 <script src="scripts/asistencia.js"></script>
+<script src="scripts/carrusel.js"></script>
 <link rel="stylesheet" type="text/css" href="estilos/login.css">
-
+<!--<link rel="stylesheet" type="text/css" href="estilos/carrusel.css">-->
 
 </head>
 
@@ -12,25 +13,16 @@
 	<div class="container">
 		
 		<div class="row" style="color: white;">
-			<?php 
-		
-			$datos=getdate();
-			echo $datos["mday"]; 
-
-
-			?>		
-		</div>
-		
-		<div class="row" style="color: white;">
 			<div class="col-md-6" style="margin-top:5%;">
-				<div hidden class="row justify-content-center">
-					
+				<div class="row justify-content-center">
+
 					<div class="col-md-8">
 						
 						<center>
 							
 							<h5> BIENVENIDO AL GIMNASIO DEL IUT </h5>
 						</center>
+
 						<input id="asistencia" type="text" name="asistencia" class="form-control btn btn-white" placeholder="Asistencia">
 						<center>
 							
@@ -38,9 +30,44 @@
 						</center>
 
 					</div>
-					
+
+		<div class="row justify-content-center" style="margin-top:4%;">
+			<div class="col-md-12">
+				<center>
+					<div class="contenedor">
+					  <div class="widget">
+						<div class="card" style="color:black;">
+							<div class="card-body">
+							    <div class="fecha">
+							      <span id="diaSemana" class="diaSemana"></span>
+							  	  <span>,</span>
+							      <span id="dia" class="dia"></span>
+							      <span>de</span>
+							      <span id="mes" class="mes"></span>
+							      <span>del</span>
+							      <span id="anio" class="anio"></span>
+							    </div>
+							</div>
+
+								<hr>
+
+							<div class="card-body" style="font-size: 300%">
+							    <div class="reloj">
+								      <span id="horas" class="horas"></span>
+								      <span>:</span>
+								      <span id="minutos" class="minutos"></span>
+								      <span id="ampm" class="ampm"></span>
+							    </div>
+							</div>
+						</div>
+					  </div>
+					</div>
+				</center>
+			</div>
+		</div>
 				</div>
-				<div class="row justify-content-center" style="margin-top:4%;">
+
+				<!--<div class="row justify-content-center" style="margin-top:4%;">
 					<div class="col-md-8">
 						<center>
 							
@@ -54,7 +81,8 @@
 							</div>
 						</center>
 					</div>
-				</div>
+				</div> -->
+
 			</div>
 
 		<div class="col-md-6" style="margin-top:10%;color:black;">

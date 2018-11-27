@@ -69,7 +69,7 @@
 		</div>
 	</div>
 
-<img id="imagenFondo" src="utilidades/imagenes/Cuaderno.jpg">
+<!--<img id="imagenFondo" src="utilidades/imagenes/Cuaderno.jpg">-->
 
 
 </body>

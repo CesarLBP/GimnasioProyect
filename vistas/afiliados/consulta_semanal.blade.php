@@ -46,8 +46,8 @@
 		<div class="row">
 			<div id="consultarUsuario" class="col-md-12">
 
-				<table style="text-align:center" class="table table-hover table-dark col-md-12">
-					<thead>
+				<table style="text-align:center" class="table table-hover table-striped col-md-12">
+					<thead class="thead-dark">
 						
 						<tr>
 							<th>Nombres</th>
@@ -63,7 +63,7 @@
 
 					foreach($afiliados as $clave => $valor){
 
-						echo '<tr>';
+						echo '<tr class="bg-light">';
 
 						echo '<th>';
 						echo $valor['nombres'];

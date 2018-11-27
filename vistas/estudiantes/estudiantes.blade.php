@@ -69,9 +69,9 @@
 			</div>
 
 			<div id="consultarUsuario" class="col-md-5 offset-md-1">
-				
-				<table style="text-align:center" class="table table-hover table-dark col-md-12">
-					<thead>
+			
+				<table style="text-align:center" class="table table-hover table-striped col-md-12">
+					<thead class="thead-dark">
 						
 						<tr>
 							<th>Nombres</th>
@@ -85,7 +85,7 @@
 
 					foreach($estudiantes as $clave => $valor){
 
-						echo '<tr>';
+						echo '<tr class="bg-light">';
 
 						echo '<th>';
 						echo $valor['nombres'];

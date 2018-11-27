@@ -8,7 +8,7 @@
 
 			Accion::cargarPagina('cursos','estudiantes_sin_curso',['cursos'=>$datos1]);
 		}
-<<<<<<< HEAD
+//<<<<<<<< HEAD
 		public static function mis_cursos(){
 
 			Accion::cargarPagina('cursos','mis_cursos');
@@ -16,10 +16,11 @@
 		public static function consultar_cursos(){
 
 			Accion::cargarPagina('cursos','consultar_cursos');
-=======
+		}
+//=======
 		public static function crear_curso_nuevo(){
 			
->>>>>>> 03ae1752043f0078509ecff90a1cc5107baf28c6
+//>>>>>>> 03ae1752043f0078509ecff90a1cc5107baf28c6
 		}
 
 		public static function crear_curso(){
