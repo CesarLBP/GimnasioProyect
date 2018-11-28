@@ -80,28 +80,52 @@ CREATE TABLE asistencia
     PRIMARY KEY (id),
     FOREIGN KEY (id_afiliado) REFERENCES afiliado(id)
 );
+
 INSERT INTO asistencia (id, id_afiliado, asistencia) VALUES (1,1,0);
 
+<<<<<<< HEAD
+=======
+create table profesor(
+    id int not null  AUTO_INCREMENT,
+    id_persona int not null,
+    id_usuario int not null,
+
+    PRIMARY KEY (id)
+);
+
+INSERT INTO profesor (id, id_persona, id_usuario) VALUES (1,1,1);
+
+>>>>>>> e63f92cec78b6f7fcf0aeb0e9b5ab45e2f3deb02
 create table curso
 (
     id int not null AUTO_INCREMENT,
     id_departamento int not null,
+<<<<<<< HEAD
     id_usuario int not null,
     nota int(2),
+=======
+    id_profesor int not null,
+>>>>>>> e63f92cec78b6f7fcf0aeb0e9b5ab45e2f3deb02
     
     PRIMARY KEY (id),
     FOREIGN KEY (id_usuario) REFERENCES usuario(id),
     FOREIGN KEY (id_departamento) REFERENCES departamento(id)
 );
+<<<<<<< HEAD
 INSERT INTO curso (id, id_departamento, id_usuario, nota) VALUES (1,1,1,0);
+=======
+
+INSERT INTO curso(id, id_departamento, id_profesor) VALUES (1,1,1);
+>>>>>>> e63f92cec78b6f7fcf0aeb0e9b5ab45e2f3deb02
 
 CREATE TABLE estudianteCurso(
     id int not null AUTO_INCREMENT,
     id_estudiante int not null,
     id_curso int not null,
-    
+    nota int(2),
+
     PRIMARY KEY (id),
     FOREIGN KEY (id_estudiante) REFERENCES estudiante(id),
     FOREIGN KEY (id_curso) REFERENCES curso(id)
 );
-INSERT INTO estudianteCurso(id, id_estudiante, id_curso) values (1,1,1);
+INSERT INTO estudianteCurso(id, id_estudiante, id_curso, nota) values (1,1,1,0);

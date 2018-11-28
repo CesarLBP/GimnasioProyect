@@ -56,12 +56,17 @@
 				'asignar_estudiantes'=>[1,[0,1]],
 				'consultar_cursos'=>[1,[0,1]],
 				'crear_curso'=>[1,[0,1]],
+<<<<<<< HEAD
 //<<<<<<< HEAD
 				'consultar_cursos'=>[1,[0,1]],
 //=======
 				'crear_curso_nuevo'=>[1,[0,1]],
 //>>>>>>> 03ae1752043f0078509ecff90a1cc5107baf28c6
 				'modificar_usuario'=>[1,[0,1]],
+=======
+				'crear_curso_nuevo'=>[1,[0,1]],
+				//'modificar_usuario'=>[1,[0,1]],
+>>>>>>> e63f92cec78b6f7fcf0aeb0e9b5ab45e2f3deb02
 				'consultap1'=>[1,[0,1,3]],
 				'mis_cursos'=>[1,[0,1,3]]
 			]

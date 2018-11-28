@@ -3,24 +3,78 @@
 	class ControladorCursos{
 
 		public static function estudiantes_sin_curso(){
+
 			$con = new Conexion();
 			$datos1 = $con->extraer('SELECT p.id,p.nombres,p.apellidos,p.cedula,p.sexo,d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento');
 
 			Accion::cargarPagina('cursos','estudiantes_sin_curso',['cursos'=>$datos1]);
 		}
+<<<<<<< HEAD
 //<<<<<<<< HEAD
+=======
+
+>>>>>>> e63f92cec78b6f7fcf0aeb0e9b5ab45e2f3deb02
 		public static function mis_cursos(){
 
 			Accion::cargarPagina('cursos','mis_cursos');
 		}
+
 		public static function consultar_cursos(){
 
 			Accion::cargarPagina('cursos','consultar_cursos');
+<<<<<<< HEAD
 		}
 //=======
 		public static function crear_curso_nuevo(){
 			
 //>>>>>>> 03ae1752043f0078509ecff90a1cc5107baf28c6
+=======
+
+		}
+
+		public static function crear_curso_nuevo(){
+
+			//Validar lo que llega mediante post
+
+			if( (isset($_POST['profesor']) && ($_POST['profesor']>0)) && (isset($_POST['departamento']) && ($_POST['departamento']>0)) && (isset($_POST['est']) && (count($_POST['est'])>0))){
+
+				$num_est = count($_POST['est'])-1;
+				$con = new Conexion;
+
+				$con->enviar('INSERT INTO curso (id_departamento,id_profesor) values (:id_departamento, :id_profesor)',['id_departamento'=>$_POST['departamento'],'id_profesor'=>$_POST['profesor']]);
+
+				$id_curso = $con->extraer('SELECT max(id) FROM curso');
+
+				$sql = 'INSERT INTO estudiantecurso (id_curso,id_estudiante) values ';
+
+				foreach ($_POST['est'] as $clave => $valor){
+
+					$sql .= '('.$id_curso.',:id_estudiante_'.$clave.')';
+
+					$arr['id_estudiante_'.$clave] = $_POST['est'][$clave];
+
+					if($clave != $num_est){
+
+						$sql .= ',';
+
+					}else{
+
+						$sql .= ';';
+
+					}
+				
+				}
+
+				if($con->enviar($sql,$arr)){
+
+					redireccionar('cursos','crear_curso_nuevo','');
+				}else{
+
+					echo "datos invalidos";
+				}
+
+			}
+>>>>>>> e63f92cec78b6f7fcf0aeb0e9b5ab45e2f3deb02
 		}
 
 		public static function crear_curso(){
@@ -140,49 +194,6 @@
 					break;
 			}
 
-		/*	switch ($_POST['tra']) {
-				case '0':
-					$datos1 = $con->extraer('SELECT p.id,p.nombres,p.apellidos,p.cedula,p.sexo,d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento AND e.trayecto="0"');
-
-				Accion::cargarPagina('cursos','cursos',['cursos'=>$datos1]);
-					break;
-
-				case '1':
-					$datos1 = $con->extraer('SELECT p.id,p.nombres,p.apellidos,p.cedula,p.sexo,d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento AND e.trayecto="1"');
-
-				Accion::cargarPagina('cursos','cursos',['cursos'=>$datos1]);
-					break;
-
-				case '2':
-					$datos1 = $con->extraer('SELECT p.id,p.nombres,p.apellidos,p.cedula,p.sexo,d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento AND e.trayecto="2	"');
-
-				Accion::cargarPagina('cursos','cursos',['cursos'=>$datos1]);
-					break;
-
-				case '3':
-					$datos1 = $con->extraer('SELECT p.id,p.nombres,p.apellidos,p.cedula,p.sexo,d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento AND e.trayecto="3"');
-
-				Accion::cargarPagina('cursos','cursos',['cursos'=>$datos1]);
-					break;
-
-				case '4':
-					$datos1 = $con->extraer('SELECT p.id,p.nombres,p.apellidos,p.cedula,p.sexo,d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento AND e.trayecto="4"');
-
-				Accion::cargarPagina('cursos','cursos',['cursos'=>$datos1]);
-					break;
-				
-				default:
-					$datos1 = $con->extraer('SELECT p.id,p.nombres,p.apellidos,p.cedula,p.sexo,d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento');
-
-					$profesor = $con->extraer('SELECT persona.nombres, persona.id FROM usuario,persona WHERE usuario.id_persona=persona.id AND permisos="0001"');
-
-						
-
-				Accion::cargarPagina('cursos','cursos',['cursos'=>$datos1,'profesores'=>$profesor]);
-					break;
-			}
-			
-*/
 		}
 
 		public static function consultap1(){

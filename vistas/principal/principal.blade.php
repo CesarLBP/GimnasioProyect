@@ -15,7 +15,11 @@
 		<div class="row" style="color: white;">
 			<div class="col-md-6" style="margin-top:5%;">
 				<div class="row justify-content-center">
+<<<<<<< HEAD
 
+=======
+					
+>>>>>>> e63f92cec78b6f7fcf0aeb0e9b5ab45e2f3deb02
 					<div class="col-md-8">
 						
 						<center>

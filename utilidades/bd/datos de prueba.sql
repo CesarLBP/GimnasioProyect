@@ -29,6 +29,7 @@ insert into asistencia (id_afiliado, asistencia) VALUES
 (4,12),
 (5,1);
 
+<<<<<<< HEAD
 insert into curso (id_departamento, id_usuario, nota) VALUES
 (2,2,20),
 (3,3,15),
@@ -36,7 +37,16 @@ insert into curso (id_departamento, id_usuario, nota) VALUES
 (5,5,5);
 
 insert into estudianteCurso (id_estudiante,id_curso) VALUES
+=======
+insert into curso (id_departamento, id_profesor) VALUES
+>>>>>>> e63f92cec78b6f7fcf0aeb0e9b5ab45e2f3deb02
 (2,2),
 (3,3),
 (4,4),
 (5,5);
+
+insert into estudianteCurso (id_estudiante,id_curso,nota) VALUES
+(2,2,20),
+(3,3,15),
+(4,4,10),
+(5,5,5);
