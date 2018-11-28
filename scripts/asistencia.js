@@ -1,24 +1,25 @@
-
 $(function(){
-function funciona(data){
 
-	alertify.success('Asistencia Registrada');
-	$('#asistencia').val('');
-}
-function error(){
+	function funciona(data){
 
-	console.log('ERROR');
-}
+		alertify.success('Asistencia Registrada');
+		$('#asistencia').val('');
+
+	}
+
+	function error(){
+
+		console.log('ERROR');
+	}
 
 
 	$('#registrar').click(function(){
+		alert('fuera de aqui sapo');
 
-				datos={
-					asistencia:$('#asistencia').val()
-				}
-			
-			ETFPost(datos,funciona,error);
+	});
 
+	$('#asistencia').keypress(function(e) {
+		if (e.keycode==='13') {alert('funca');}
 	});
 
 });

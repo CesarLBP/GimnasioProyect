@@ -2,7 +2,7 @@
 <script src="scripts/asistencia.js"></script>
 <script src="scripts/carrusel.js"></script>
 <link rel="stylesheet" type="text/css" href="estilos/login.css">
-<!--<link rel="stylesheet" type="text/css" href="estilos/carrusel.css">-->
+<link rel="stylesheet" type="text/css" href="estilos/carrusel.css">
 
 </head>
 
@@ -20,24 +20,22 @@
 						
 						<center>
 							
-							<h5> BIENVENIDO AL GIMNASIO DEL IUT </h5>
+							<p style="font-size: 200%"> BIENVENIDO AL GIMNASIO DEL IUT </p>
 						</center>
 
-						<input id="asistencia" type="text" name="asistencia" class="form-control btn btn-white" placeholder="Asistencia">
+						<input id="asistencia" type="text" name="asistencia" class="form-control btn btn-white" placeholder="Asistencia" onclick="e">
 						<center>
 							
-							{{Crear::botonEnviarAjax('Asistencia','Afiliados','asistenciaAfiliado','registrar','btn btn-dark col-6')}}
+							{{Crear::botonEnviarAjax('Asistencia','Afiliados','asistenciaAfiliado','registrar','btn btn-dark col-6','data-toggle="modal" data-target="#registrar-afiliado"')}}
 						</center>
 
 					</div>
 
-		<div class="row justify-content-center" style="margin-top:4%;">
-			<div class="col-md-12">
-				<center>
-					<div class="contenedor">
+					<div style="padding-top: 130%">
 					  <div class="widget">
-						<div class="card" style="color:black;">
-							<div class="card-body">
+					  	<div style="  background: rgba(0,0,0,.5);
+">
+
 							    <div class="fecha">
 							      <span id="diaSemana" class="diaSemana"></span>
 							  	  <span>,</span>
@@ -47,24 +45,22 @@
 							      <span>del</span>
 							      <span id="anio" class="anio"></span>
 							    </div>
-							</div>
 
 								<hr>
 
-							<div class="card-body" style="font-size: 300%">
+							
 							    <div class="reloj">
 								      <span id="horas" class="horas"></span>
-								      <span>:</span>
+								      <span style="color:red;">:</span>
 								      <span id="minutos" class="minutos"></span>
+								      <span style="color:red;">:</span>
+								      <span id="segundos" class="segundos"></span>
 								      <span id="ampm" class="ampm"></span>
 							    </div>
-							</div>
+
 						</div>
 					  </div>
 					</div>
-				</center>
-			</div>
-		</div>
 				</div>
 
 				<!--<div class="row justify-content-center" style="margin-top:4%;">
@@ -120,8 +116,31 @@
 
 			</div>
 		</div>	
-										
+		<div style="color:black;" class="modal fade" id="registrar-afiliado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      
+
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							
+							<center>
+								<div id="info">
+									
+								</div>
+								<button data-dismiss="modal" class=" col-md-4 btn btn-info">Aceptar</button>
+							</center>
+						</div>
+					</div>
+
+				</div>
+
+		    </div>
+		  </div>
+		</div>									
 	</div>
+
 	<script src="scripts/principal.js"></script>
 	<!--img id="imagenFondo" src="utilidades/imagenes/asistencia.jpg"-->
 </body>

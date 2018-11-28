@@ -17,12 +17,6 @@ insert into  afiliado (id_persona,tipo_sangre,estatura,peso,fecha_nac) VALUES
 (4,'AB-','1.45','75','2020/02/21'),
 (5,'AB-','1.56','78','2010/01/31');
 
-insert into profesor (id_persona,id_usuario) VALUES 
-(2,2),
-(3,3),
-(4,4),
-(5,5);
-
 insert into usuario(id_persona,usuario,contrasena,permisos,estado) VALUES
 (2,'qw','$2y$10$M/rx0pFFvSqwRjJKpbaOaODA/MoajIG8pxX9VAu0w8VufOJ4D06gm','0100',1),
 (3,'as','$2y$10$M/rx0pFFvSqwRjJKpbaOaODA/MoajIG8pxX9VAu0w8VufOJ4D06gm','0100',1),
@@ -35,7 +29,7 @@ insert into asistencia (id_afiliado, asistencia) VALUES
 (4,12),
 (5,1);
 
-insert into curso (id_departamento, id_profesor, nota) VALUES
+insert into curso (id_departamento, id_usuario, nota) VALUES
 (2,2,20),
 (3,3,15),
 (4,4,10),

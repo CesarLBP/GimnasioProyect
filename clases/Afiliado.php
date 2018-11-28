@@ -50,5 +50,13 @@ require_once 'Persona.php';
 			return $con->enviar("insert into asistencia (id_afiliado,asistencia) values ((select max(id) from afiliado),0)");
 		}
 
+		public static function RegistrarAsistencia(){
+			$con = new Conexion();
+
+			return $con->enviar("Update `asistencia` SET `asistencia`= asistencia.asistencia + 1 WHERE asistencia.id_afiliado = ( SELECT afiliado.id FROM afiliado,persona WHERE afiliado.id_persona = persona.id and persona.cedula = :cedula )",array('cedula'=>$_POST['asistencia']));
+
+		}
+
+
 	}
 ?>

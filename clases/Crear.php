@@ -31,16 +31,16 @@
 			echo self::botonEnviarSave($nom,$mod,$pag,$id,$cla);
 		}
 
-		public static function botonEnviarAjax($nom,$con,$met,$id,$cla){
+		public static function botonEnviarAjax($nom,$con,$met,$id,$cla,$att){
 
-			echo self::botonEnviarAjaxSave($nom,$con,$met,$id,$cla);
+			echo self::botonEnviarAjaxSave($nom,$con,$met,$id,$cla,$att);
 
 		}
-		public static function botonEnviarAjaxSave($nom,$con,$met,$id,$cla){
+		public static function botonEnviarAjaxSave($nom,$con,$met,$id,$cla,$att=''){
 		//public static function botonEnviarAjaxSave($id,$cla,$con,$met){
 
 			return '<input id="met" hidden value="'.$con.'/'.$met.'">
-					<input type="submit" id="'.$id.'"  class="'.$cla.'"value="'.$nom.'">';
+					<input type="submit" id="'.$id.'"  class="'.$cla.'"value="'.$nom.'" '.$att.'>';
 
 		}
 

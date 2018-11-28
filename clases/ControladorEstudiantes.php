@@ -6,7 +6,7 @@
 
 			$con = new Conexion();
 
-			$datos = $con->extraer('SELECT p.nombres, p.apellidos, p.cedula, p.sexo, d.nombre as departamento, e.trayecto FROM persona as p, estudiante as e, departamento as d WHERE p.id = e.id_persona and e.id_departamento = d.id');
+			$datos = $con->extraer('SELECT p.nombres, p.apellidos, p.cedula, p.sexo, d.nombre as departamento, e.trayecto FROM persona as p, estudiante as e, departamento as d WHERE p.id = e.id_persona and e.id_departamento = d.id and p.id != 1');
 
 			Accion::cargarPagina('estudiantes','estudiantes',['estudiantes'=>$datos]);
 		}

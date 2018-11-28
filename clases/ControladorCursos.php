@@ -26,7 +26,7 @@
 		public static function crear_curso(){
 			$con = new Conexion();
 			$deps = $con->extraer('SELECT * FROM departamento');
-			$prof = $con->extraer('SELECT profesor.id, nombres, apellidos FROM persona, profesor WHERE profesor.id_persona = persona.id');
+			$prof = $con->extraer('SELECT usuario.id, nombres, apellidos FROM persona,usuario WHERE usuario.id_persona=persona.id and persona.id!= 1');
 			
 			if((isset($_GET['departamento'])) && ($_GET['departamento']!='-1')){
 				
@@ -34,7 +34,7 @@
 
 
 
-				$sql = 'SELECT e.id, p.nombres, p.apellidos, p.cedula, p.sexo, e.trayecto, d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento';
+				$sql = 'SELECT e.id, p.nombres, p.apellidos, p.cedula, p.sexo, e.trayecto, d.nombre as departamento FROM persona as p,estudiante as e,departamento as d WHERE p.id=e.id_persona AND d.id=e.id_departamento AND p.id!=1';
 				$arr = NULL;
 				
 

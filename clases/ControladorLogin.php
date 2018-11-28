@@ -85,8 +85,12 @@
 		
 			if (($Persona->crearPersona()) AND ($Usuario->crearUsuario())){
 				if($Persona->enlazar_usuario($Usuario->getUsuario())){
-					header('Location:./?mod=login/usuarios&reg=1');
-					//Si el usuario es creado correctamente
+					if ($_POST['permisos']=='0001') {
+						$Usuario->enlazar_profesor();
+						header('Location:./?mod=login/usuarios&reg=1');
+					}
+						header('Location:./?mod=login/usuarios&reg=1');
+						//Si el usuario es creado correctamente
 				}else{
 					$con = new Conexion;
 					$id_usu = $con->extraer('Select id from usuario where usuario = :usuario',['usuario'=>$Usuario->getUsuario()]);

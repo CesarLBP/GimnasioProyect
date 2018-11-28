@@ -31,9 +31,8 @@
 		}
 
 		public static function asistenciaAfiliado(){
-			$con = new Conexion();
-
-			return $con->enviar("Update `asistencia` SET `asistencia`= asistencia.asistencia + 1 WHERE asistencia.id_afiliado = ( SELECT afiliado.id FROM afiliado,persona WHERE afiliado.id_persona = persona.id and persona.cedula = :cedula )",array('cedula'=>$_POST['asistencia']));
+			
+			$Afiliado = New Afiliado ($_POST['asistencia']);
 
 		}
 

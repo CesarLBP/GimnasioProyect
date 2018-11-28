@@ -82,27 +82,18 @@ CREATE TABLE asistencia
 );
 INSERT INTO asistencia (id, id_afiliado, asistencia) VALUES (1,1,0);
 
-create table profesor(
-    id int not null  AUTO_INCREMENT,
-    id_persona int not null,
-    id_usuario int not null,
-
-    PRIMARY KEY (id)
-);
-INSERT INTO profesor (id, id_persona, id_usuario) VALUES (1,1,1);
-
 create table curso
 (
     id int not null AUTO_INCREMENT,
     id_departamento int not null,
-    id_profesor int not null,
+    id_usuario int not null,
     nota int(2),
     
     PRIMARY KEY (id),
-    FOREIGN KEY (id_profesor) REFERENCES profesor(id),
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id),
     FOREIGN KEY (id_departamento) REFERENCES departamento(id)
 );
-INSERT INTO curso (id, id_departamento, id_profesor, nota) VALUES (1,1,1,0);
+INSERT INTO curso (id, id_departamento, id_usuario, nota) VALUES (1,1,1,0);
 
 CREATE TABLE estudianteCurso(
     id int not null AUTO_INCREMENT,

@@ -91,7 +91,12 @@ require_once 'Persona.php';
 			return $con->enviar (" Update `usuario` SET usuario.estado = 0 WHERE usuario.id = :Usuario ",array('usuario'=>$usu));
 		}
 
-
+		public function enlazar_profesor(){
+			
+				$con = new Conexion();
+				return $con->enviar ('insert into profesor (id_persona,id_usuario) values ((select max(id) from persona),(select max(id) from usuario))');
+				
+		}
 
 	}
 
